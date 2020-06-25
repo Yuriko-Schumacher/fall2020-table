@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Boston Universities' plans for opening fall 2020 table</title>
-    <!-- <link 
-        rel="stylesheet" 
-        href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed|Source+Serif+Pro"
-    > -->
     <link 
         href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@700&family=Source+Serif+Pro&display=swap" 
         rel="stylesheet"
@@ -61,10 +57,25 @@
             font-family: 'Source Serif Pro', serif;
         }
 
-        #imgBostonarticle {
+        .imgBostonarticle {
             width: 27px;
             vertical-align: sub;
             margin: 0;
+        }
+
+        .hiddenRow {
+            background-color: #ddd;
+        }
+
+        .hiddenRow {
+            display: none;
+        }
+
+        #harvard button {
+            cursor: pointer;
+            background-color: #60b8ff;
+            border-radius: 30px;
+            border: none;
         }
 
         @media only screen and (max-width: 700px) {
@@ -84,50 +95,53 @@
                 font-size: .7em;
             }
         }
-
-        
     </style>
+    <script>
+        const showHideRow = row => {
+            const elements = document.getElementsByClassName(row);
+            for (let element of elements) {
+                element.style.display = element.style.display === "table-row" ? "none" : "table-row"
+            }
+
+            const button = document.getElementsByTagName('button')[0];
+            button.innerText = button.innerText === "Show All Schools" ? "Show Less" : "Show All Schools";
+        }
+    </script>
 </head>
 <body>
     <table>
-
-        <colgroup>
-            <col span="1" id="university">
-            <col span="1" id="checkmark">
-            <col span="1" id="comments">
-        </colgroup>
         
     <thead>
-    <th>University</th>
-    <th>Will at least some classes be taught in person in the fall?</th>
-    <th>Public comments from each university</th>
+        <th>University</th>
+        <th>Will at least some classes be taught in person in the fall?</th>
+        <th>Public comments from each university</th>
     </thead>
 
     <tbody>
         <tr>
             <td>Bentley University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.bentley.edu/news/trimester-program-answers-frequently-asked-questions" target="_blank" rel="noopener noreferrer">
                 "Right now, we plan on offering on-campus courses this fall..."
             </a></td>
         </tr>
         <tr>
             <td>Berklee College of Music</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.berklee.edu/covid19" target="_blank" rel="noopener noreferrer">
                 “... 60 to 80 percent likely to have students on campus in the fall, in what we’re calling it ‘on-campus hybrid model’...”
             </a></td>
         </tr>
         <tr>
             <td>Boston College</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://pro-bee-beepro-messages.s3.amazonaws.com/333451/345031/990066/5153801.html?utm_medium=Email&utm_source=ExactTarget&utm_campaign=&utm_content=&utm_term=&utm_name=&uid=&skey=0000424201&is_test=true&id_mc=51747543&email_name=200519_frleahyletter&emailid=133101&e=0000424201" target="_blank" rel="noopener noreferrer">
                 “Our intent is to open for on-campus classes as scheduled on August 31.”
             </a></td>
         </tr>
         <tr>
             <td>Boston University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.bu.edu/covid-19-information/impact-on-students-and-campus/" target="_blank" rel="noopener noreferrer">
                 "We are developing systems to make sure that we will be able to offer classes here on campus (...), but we also plan to make it possible for students to attend and participate in live class sessions remotely."
             </a></td>
@@ -139,9 +153,17 @@
                 "... we hope to provide an announcement of our best and current thinking about the Fall 2020 term by June 12."
             </a></td>
         </tr>
-        
-        <tr>
-            <td>Harvard University</td>
+
+
+
+
+
+
+        <tr id="harvard">
+            <td>
+                <div>Harvard University</div>
+                <button onclick="showHideRow('hiddenRow')">Show All Schools</button>
+            </td>
             <td>?</td>
             <td><a href="https://www.harvard.edu/coronavirus/school-program-information" target="_blank" rel="noopener noreferrer">
                 "Harvard’s undergraduate, graduate, and professional Schools will be making determinations and announcements about their plans for fall 2020 based on their own unique considerations."
@@ -152,9 +174,7 @@
 
 
 
-        
-
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Divinity School</td>
             <td>❌</td>
             <td><a href="https://hds.harvard.edu/news/2020/06/03/fall-2020-semester-plans" target="_blank" rel="noopener noreferrer">
@@ -162,7 +182,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Graduate School of Design</td>
             <td>❌</td>
             <td><a href="https://www.gsd.harvard.edu/2020/03/covid-19-guidance-for-the-harvard-graduate-school-of-design-community/" target="_blank" rel="noopener noreferrer">
@@ -170,7 +190,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Graduate School of Education</td>
             <td>❌</td>
             <td><a href="https://www.gse.harvard.edu/about/dean/messages/ay_20-21" target="_blank" rel="noopener noreferrer">
@@ -178,7 +198,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Kennedy School</td>
             <td>❌</td>
             <td><a href="https://www.hks.harvard.edu/more/about/leadership-administration/deans-office/deans-presentations/fall-semester-harvard-kennedy" target="_blank" rel="noopener noreferrer">
@@ -186,7 +206,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Law School</td>
             <td>❌</td>
             <td><a href="https://hls.harvard.edu/hls-fall-term-2020/" target="_blank" rel="noopener noreferrer">
@@ -194,7 +214,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Medical School</td>
             <td>❌</td>
             <td><a href="https://hms.harvard.edu/coronavirus/coronavirus-communications" target="_blank" rel="noopener noreferrer">
@@ -202,7 +222,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard School of Dental Medicine</td>
             <td>❌</td>
             <td><a href="https://hms.harvard.edu/coronavirus/coronavirus-communications" target="_blank" rel="noopener noreferrer">
@@ -210,7 +230,7 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard T.H. Chan School of Public Health</td>
             <td>❌</td>
             <td><a href="https://www.hsph.harvard.edu/coronavirus/2020/06/03/education-plans-for-the-fall/" target="_blank" rel="noopener noreferrer">
@@ -218,42 +238,42 @@
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Business School</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard College</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Graduate School of Arts and Sciences</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard John A. Paulson School of Engineering and Applied Sciences</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Harvard Division of Continuing Education</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
             </a></td>
         </tr>
 
-        <tr>
+        <tr class='hiddenRow'>
             <td>Radcliffe Institute for Advanced Study</td>
             <td>?</td>
             <td><a href="" target="_blank" rel="noopener noreferrer">
@@ -271,14 +291,14 @@
         
         <tr>
             <td>MIT</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://covid19.mit.edu/safe-gradual-return-to-campus-for-graduate-students" target="_blank" rel="noopener noreferrer">
                 “... the Institute is beginning to take measured steps to bring people back to campus, starting with research operations and graduate students who departed in March.”
             </a></td>
         </tr>
         <tr>
             <td>Northeastern University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://news.northeastern.edu/coronavirus/university-messages/update-on-fall-learning-and-reopening-introducing-nuflex/" target="_blank" rel="noopener noreferrer">
                 "... we are announcing NUflex, an exciting hybrid-flexible learning experience available for Northeastern classes this fall. (...) Some students may attend class in person while others will be connected virtually through innovative technology that allows for communication by audio, chat, or video."
             </a></td>
@@ -299,7 +319,7 @@
         </tr>
         <tr>
             <td>Tufts University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://coronavirus.tufts.edu/05-14-20-update-on-resuming-campus-based-activities" target="_blank" rel="noopener noreferrer">
                 "... consider multiple modes of teaching including the possibility of a hybrid model in which some programs or individual courses are taught in person, some remotely, and some in a dual format."
             </a></td>
