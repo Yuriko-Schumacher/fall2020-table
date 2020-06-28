@@ -57,18 +57,15 @@
             font-family: 'Source Serif Pro', serif;
         }
 
-        .imgBostonarticle {
+        .hiddenRow {
+            background-color: #ddd;
+            display: none;
+        }
+
+        #imgBostonarticle {
             width: 27px;
             vertical-align: sub;
             margin: 0;
-        }
-
-        .hiddenRow {
-            background-color: #ddd;
-        }
-
-        .hiddenRow {
-            display: none;
         }
 
         #harvard button {
@@ -76,6 +73,10 @@
             background-color: #60b8ff;
             border-radius: 30px;
             border: none;
+            width: 100px;
+            font-size: 13px;
+            color: #ffffff;
+            vertical-align: middle;
         }
 
         @media only screen and (max-width: 700px) {
@@ -88,8 +89,13 @@
         }
 
         @media only screen and (max-width: 400px) {
+            
+            table th, table td {
+            padding: 5px 5px;
+            }
+
             tr > td:nth-child(1) {
-                font-size: .8em;
+                font-size: .6em;
             }
             tr > td:nth-child(3) {
                 font-size: .7em;
@@ -114,42 +120,42 @@
         
     <thead>
         <th>University</th>
-        <th>Will at least some classes be taught in person in the fall?</th>
+        <th>At least some classes in-person in fall</th>
         <th>Public comments from each university</th>
     </thead>
 
     <tbody>
         <tr>
             <td>Bentley University</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.bentley.edu/news/message-board-chairman-bentley-community" target="_blank" rel="noopener noreferrer">
                 "We are prudently preparing our campus to reopen (...) with the anticipation that students will return to campus in August."
             </a></td>
         </tr>
         <tr>
             <td>Berklee College of Music</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.berklee.edu/btb" target="_blank" rel="noopener noreferrer">
                 “This fall, we invite Berklee students to begin or return to their studies in a hybrid model we’re calling Back to Berklee.”
             </a></td>
         </tr>
         <tr>
             <td>Boston College</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.bc.edu/content/bc-web/sites/reopening-boston-college/students" target="_blank" rel="noopener noreferrer">
                 “Boston College intends to begin the 2020–2021 academic year on Monday, August 31 with on-campus, in-class instruction.”
             </a></td>
         </tr>
         <tr>
             <td>Boston University</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.bu.edu/back2bu/" target="_blank" rel="noopener noreferrer">
                 "... this fall will mark the launch of a new simultaneous in-person and remote hybrid teaching system called Learn from Anywhere (LfA)..."
             </a></td>
         </tr>
         <tr>
             <td>Emerson College</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://today.emerson.edu/2020/06/10/fall-2020-reopening-plan/" target="_blank" rel="noopener noreferrer">
                 "This fall, the College will launch One Emerson Flex Learning (...). Most courses will have blended learning: a combination of in-person experiences alternating with synchronous and asynchronous technologies."
             </a></td>
@@ -162,10 +168,9 @@
 
         <tr id="harvard">
             <td>
-                <div>Harvard University</div>
-                <button onclick="showHideRow('hiddenRow')">Show All Schools</button>
+                Harvard University
             </td>
-            <td>?</td>
+            <td><button onclick="showHideRow('hiddenRow')">Show All Schools</button></td>
             <td><a href="https://www.harvard.edu/coronavirus/school-program-information" target="_blank" rel="noopener noreferrer">
                 "Harvard’s undergraduate, graduate, and professional Schools will be making determinations and announcements about their plans for fall 2020 based on their own unique considerations."
             </a></td>
@@ -217,7 +222,7 @@
 
         <tr class='hiddenRow'>
             <td>Harvard Medical School</td>
-            <td>△</td>
+            <td>❌</td>
             <td><a href="https://hms.harvard.edu/coronavirus/coronavirus-communications" target="_blank" rel="noopener noreferrer">
                 "... our fall 2020 courses will commence remotely for our entering classes..."
             </a></td>
@@ -242,43 +247,37 @@
         <tr class='hiddenRow'>
             <td>Harvard Business School</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard College</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard Graduate School of Arts and Sciences</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard John A. Paulson School of Engineering and Applied Sciences</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard Division of Continuing Education</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Radcliffe Institute for Advanced Study</td>
             <td>?</td>
-            <td><a href="" target="_blank" rel="noopener noreferrer">
-            </a></td>
+            <td>TBD</td>
         </tr>
 
 
@@ -292,16 +291,16 @@
         
         <tr>
             <td>MIT</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://covid19.mit.edu/initial-decisions-about-fall-at-mit" target="_blank" rel="noopener noreferrer">
                 “Undergraduates who are on campus will have some small-group in-person learning experiences, with particular focus on classes that require access to labs, workshops and performance spaces.”
             </a></td>
         </tr>
         <tr>
             <td>Northeastern University</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
-            <td><a href="https://news.northeastern.edu/coronavirus/university-messages/update-on-fall-learning-and-reopening-introducing-nuflex/" target="_blank" rel="noopener noreferrer">
-                "... we are announcing NUflex, an exciting hybrid-flexible learning experience available for Northeastern classes this fall. (...) Some students may attend class in person while others will be connected virtually through innovative technology that allows for communication by audio, chat, or video."
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><a href="https://news.northeastern.edu/coronavirus/university-messages/update-on-fall-2020-reopening-plans/" target="_blank" rel="noopener noreferrer">
+                "We will use a hybrid-flexible learning model called NUflex to allow Northeastern to reduce density and to offer flexibility to faculty and students."
             </a></td>
         </tr>
         <tr>
@@ -313,14 +312,14 @@
         </tr>
         <tr>
             <td>Suffolk University</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://www.suffolk.edu/about/president-leadership/provost/on-campus-teaching-faqs" target="_blank" rel="noopener noreferrer">
                 "Suffolk University is developing a number of plans to address the public health issues associated with in-person teaching this fall..."
             </a></td>
         </tr>
         <tr>
             <td>Tufts University</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://coronavirus.tufts.edu/" target="_blank" rel="noopener noreferrer">
                 "We’re getting ready to welcome students this fall in a variety of class formats—including in-person, virtual, a hybrid of the two, or fully remote..."
             </a></td>
@@ -341,7 +340,7 @@
         </tr>
         <tr>
             <td>Wellesley College</td>
-            <td><img class="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
             <td><a href="https://blogs.wellesley.edu/announcements/2020/06/23/looking-ahead-to-fall-2020/" target="_blank" rel="noopener noreferrer">
                 "... the fall on-campus curriculum is designed for first-years and sophomores while the spring on-campus curriculum will be designed for juniors and seniors."
             </a></td>
