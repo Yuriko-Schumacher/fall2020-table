@@ -110,7 +110,7 @@
                 element.style.display = element.style.display === "table-row" ? "none" : "table-row"
             }
 
-            const button = document.getElementsByTagName('button')[0];
+            const button = document.getElementById('harvard-button');
             button.innerText = button.innerText === "Show All Schools" ? "Show Less" : "Show All Schools";
         }
     </script>
@@ -127,35 +127,35 @@
     <tbody>
         <tr>
             <td>Bentley University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
-            <td><a href="https://www.bentley.edu/news/message-board-chairman-bentley-community" target="_blank" rel="noopener noreferrer">
-                "We are prudently preparing our campus to reopen (...) with the anticipation that students will return to campus in August."
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
+            <td><a href="https://www.bentley.edu/backtobentley" target="_blank" rel="noopener noreferrer">
+                "We are planning a return to campus for students, faculty and staff for the fall 2020 trimester and we are excited to welcome you back."
             </a></td>
         </tr>
         <tr>
             <td>Berklee College of Music</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://www.berklee.edu/btb" target="_blank" rel="noopener noreferrer">
                 “This fall, we invite Berklee students to begin or return to their studies in a hybrid model we’re calling Back to Berklee.”
             </a></td>
         </tr>
         <tr>
             <td>Boston College</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://www.bc.edu/content/bc-web/sites/reopening-boston-college/students" target="_blank" rel="noopener noreferrer">
                 “Boston College intends to begin the 2020–2021 academic year on Monday, August 31 with on-campus, in-class instruction.”
             </a></td>
         </tr>
         <tr>
             <td>Boston University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://www.bu.edu/back2bu/" target="_blank" rel="noopener noreferrer">
                 "... this fall will mark the launch of a new simultaneous in-person and remote hybrid teaching system called Learn from Anywhere (LfA)..."
             </a></td>
         </tr>
         <tr>
             <td>Emerson College</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://today.emerson.edu/2020/06/10/fall-2020-reopening-plan/" target="_blank" rel="noopener noreferrer">
                 "This fall, the College will launch One Emerson Flex Learning (...). Most courses will have blended learning: a combination of in-person experiences alternating with synchronous and asynchronous technologies."
             </a></td>
@@ -170,7 +170,7 @@
             <td>
                 Harvard University
             </td>
-            <td><button onclick="showHideRow('hiddenRow')">Show All Schools</button></td>
+            <td><button id="harvard-button" onclick="showHideRow('hiddenRow')">Show All Schools</button></td>
             <td><a href="https://www.harvard.edu/coronavirus/school-program-information" target="_blank" rel="noopener noreferrer">
                 "Harvard’s undergraduate, graduate, and professional Schools will be making determinations and announcements about their plans for fall 2020 based on their own unique considerations."
             </a></td>
@@ -246,38 +246,50 @@
 
         <tr class='hiddenRow'>
             <td>Harvard Business School</td>
-            <td>?</td>
-            <td>TBD</td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
+            <td><a href="https://www.hbs.edu/coronavirus/statements-communications/Pages/default.aspx?post=94" target="_blank" rel="noopener noreferrer">
+                "We carefully considered whether shifting to fully remote/online was the right option for HBS, and ultimately decided against it."
+            </a></td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard College</td>
-            <td>?</td>
-            <td>TBD</td>
+            <td>❌</td>
+            <td><a href="https://college.harvard.edu/ourpathforward" target="_blank" rel="noopener noreferrer">
+                "... all course instruction for the 2020-21 academic year will be delivered online."
+            </a></td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Harvard Graduate School of Arts and Sciences</td>
-            <td>?</td>
-            <td>TBD</td>
+            <td>❌</td>
+            <td><a href="https://www.fas.harvard.edu/news/fas-fall-2020-plans" target="_blank" rel="noopener noreferrer">
+                "... all course instruction (undergraduate and graduate) for the 2020-21 academic year will be delivered online."
+            </a></td>
         </tr>
 
         <tr class='hiddenRow'>
-            <td>Harvard John A. Paulson School of Engineering and Applied Sciences</td>
+            <td>School of Engineering and Applied Sciences</td>
             <td>?</td>
-            <td>TBD</td>
+            <td><a href="https://projects.iq.harvard.edu/coronavirus" target="_blank" rel="noopener noreferrer">
+                "... we are in the process of updating any outdated information."
+            </a></td>
         </tr>
 
         <tr class='hiddenRow'>
-            <td>Harvard Division of Continuing Education</td>
-            <td>?</td>
-            <td>TBD</td>
+            <td>Harvard Extension School</td>
+            <td>❌</td>
+            <td><a href="https://blog.dce.harvard.edu/extension/announcing-new-graduate-and-undergraduate-certificates-online-courses-for-2020-21" target="_blank" rel="noopener noreferrer">
+                "All Extension courses through spring 2021 will be hosted online."
+            </a></td>
         </tr>
 
         <tr class='hiddenRow'>
             <td>Radcliffe Institute for Advanced Study</td>
-            <td>?</td>
-            <td>TBD</td>
+            <td>❌</td>
+            <td><a href="https://www.radcliffe.harvard.edu/coronavirus" target="_blank" rel="noopener noreferrer">
+                "... Radcliffe Institute activities will continue to be virtual."
+            </a></td>
         </tr>
 
 
@@ -291,14 +303,14 @@
         
         <tr>
             <td>MIT</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://covid19.mit.edu/initial-decisions-about-fall-at-mit" target="_blank" rel="noopener noreferrer">
                 “Undergraduates who are on campus will have some small-group in-person learning experiences, with particular focus on classes that require access to labs, workshops and performance spaces.”
             </a></td>
         </tr>
         <tr>
             <td>Northeastern University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://news.northeastern.edu/coronavirus/university-messages/update-on-fall-2020-reopening-plans/" target="_blank" rel="noopener noreferrer">
                 "We will use a hybrid-flexible learning model called NUflex to allow Northeastern to reduce density and to offer flexibility to faculty and students."
             </a></td>
@@ -312,23 +324,23 @@
         </tr>
         <tr>
             <td>Suffolk University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://www.suffolk.edu/about/president-leadership/provost/on-campus-teaching-faqs" target="_blank" rel="noopener noreferrer">
                 "Suffolk University is developing a number of plans to address the public health issues associated with in-person teaching this fall..."
             </a></td>
         </tr>
         <tr>
             <td>Tufts University</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
             <td><a href="https://coronavirus.tufts.edu/" target="_blank" rel="noopener noreferrer">
                 "We’re getting ready to welcome students this fall in a variety of class formats—including in-person, virtual, a hybrid of the two, or fully remote..."
             </a></td>
         </tr>
         <tr>
             <td>UMass Amherst</td>
-            <td>?</td>
-            <td><a href="https://www.umass.edu/coronavirus/news/revised-academic-calendar-fall-2020" target="_blank" rel="noopener noreferrer">
-                "Classes will start earlier than usual, on Aug. 24, conclude Nov. 20, and students will not return to campus after Thanksgiving recess."
+            <td>❌</td>
+            <td><a href="https://www.umass.edu/coronavirus/sites/default/files/2020-06/Fall-2020-Reopening-Plan_1.pdf" target="_blank" rel="noopener noreferrer">
+                "... it is highly likely that most, if not all, of their classes will be conducted remotely. Only essential face-to-face labs, studios, performance, and other courses involving hands-on work will be conducted on campus and in-person."
             </a></td>
         </tr>
         <tr>
@@ -340,9 +352,9 @@
         </tr>
         <tr>
             <td>Wellesley College</td>
-            <td><img id="imgBostonarticle" src="https://i.ibb.co/NSywT34/Checkmark.png"></td>
-            <td><a href="https://blogs.wellesley.edu/announcements/2020/06/23/looking-ahead-to-fall-2020/" target="_blank" rel="noopener noreferrer">
-                "... the fall on-campus curriculum is designed for first-years and sophomores while the spring on-campus curriculum will be designed for juniors and seniors."
+            <td><img id="imgBostonarticle" src="https://i.ibb.co/xGGxFRP/checkmark.png"></td>
+            <td><a href="https://blogs.wellesley.edu/announcements/2020/06/30/wellesleys-plan-for-fall-2020-and-beyond/" target="_blank" rel="noopener noreferrer">
+                "Faculty are preparing some courses geared specifically toward students living on campus, some for students who will be taking classes remotely, and others that will be available to both groups."
             </a></td>
         </tr>
     </tbody>
