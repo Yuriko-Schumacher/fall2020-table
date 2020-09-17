@@ -129,9 +129,13 @@
                 const paragraph1PureNumbers = getPureNumbers(1);
                 const paragraph1Ketas = ketaAdder(paragraph1PureNumbers);
                 
+                if(paragraph1PureNumbers.length === 2){
                     createParagraph(0, `新型コロナウイルス、現在の感染者・死者数（<span class="mark1">${publishedDate.getDate()}</span>日午後8時時点） 死者<span class="mark1">${Math.floor((paragraph1PureNumbers[0]/Math.pow(10,4))*Math.pow(10, 1))/Math.pow(10,1)}万</span>人に`);
                     createParagraph(1, `【<span class="mark1">${todayInJapan.getMonth()+1}</span>月<span class="mark1">${todayInJapan.getDate()}</span>日 AFP】AFPが各国当局の発表に基づき日本時間<span class="mark1">${publishedDate.getDate()}</span>日午後8時にまとめた統計によると、世界の新型コロナウイルスによる死者数は<span class="mark1">${paragraph1Ketas[0]}</span>人に増加した。`);
-                
+                    } else {
+                        createParagraph(0, `新型コロナウイルス、現在の感染者・死者数（<span class="mark1">${publishedDate.getDate()}</span>日午後8時時点） 死者〓万（←※エラー：1パラを修正してください）人に`);
+                        createParagraph(1, `【<span class="mark1">${todayInJapan.getMonth()+1}</span>月<span class="mark1">${todayInJapan.getDate()}</span>日 AFP】AFPが各国当局の発表に基づき日本時間<span class="mark1">${publishedDate.getDate()}</span>日午後8時にまとめた統計によると、世界の新型コロナウイルスによる死者数は〓万〓〓〓〓（←※エラー：1パラを修正してください）人に増加した。`);
+                    };
 
             // 2nd paragraph
                 const paragraph2PureNumbers = getPureNumbers(2);
